@@ -13,48 +13,48 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-    <title>html5-form</title>
+    <title>Validation Form</title>
   </head>
 
-  <body>
+  <body class="p-3 mb-2 bg-info text-white">
     <div
       class="card border rounded w-75 d-flex justify-content-center mx-auto mt-5"
     >
-      <div class="card-header">
-        <h2>Payment form example</h2>
+      <div class="card-header p-3 mb-2 bg-dark text-white">
+        <h2>Formulario de Pago</h2>
       </div>
 
       <form class="card-body" id="myForm">
         <div class="row">
-          <div class="form-group col-5" id="cardNumberDiv">
-            <label for="inputCardNumber">Card #</label>
+          <div class="form-group col-5 text-dark" id="cardNumberDiv">
+            <label for="inputCardNumber">Numero de Tarjeta</label>
             <input
               type="text"
               class="form-control"
               id="inputCardNumber"
-              placeholder="XXXXXXXXXXXXXXXX"
+              placeholder="XXXX-XXXX-XXXX-XXXX"
               required
             />
           </div>
-          <div class="form-group col-3" id="cvcNumberDiv">
-            <label for="inputCVCNumber">CVC #</label>
+          <div class="form-group col-3 text-dark" id="cvcNumberDiv">
+            <label for="inputCVCNumber">CVC </label>
             <input
               type="text"
               class="form-control"
               id="inputCVCNumber"
-              placeholder="0000"
+              placeholder="XXXX"
               required
             />
           </div>
-          <div class="form-group col-4" id="amountDiv">
-            <label for="inputAmount">Amount</label>
+          <div class="form-group col-4 text-dark" id="amountDiv">
+            <label for="inputAmount">Monto</label>
             <div class="d-flex">
               <strong>$</strong
               ><input
                 type="text"
                 class="form-control d-inline"
                 id="inputAmount"
-                placeholder="Amount"
+                placeholder="Ex. $1,500.00"
                 required
               />
             </div>
@@ -62,46 +62,55 @@
         </div>
 
         <div class="row">
-          <div class="form-group col-6" id="nameDiv">
-            <label for="inputFirstName">First Name</label>
+          <div class="form-group col-6 text-dark" id="nameDiv">
+            <label for="inputFirstName">Nombre</label>
             <input
               type="text"
               class="form-control"
               id="inputFirstName"
+              placeholder="Ex. Adrian"
               required
             />
           </div>
-          <div class="form-group col-6" id="lastnameDiv">
-            <label for="inputLastName">Last Name</label>
+          <div class="form-group col-6 text-dark" id="lastnameDiv">
+            <label for="inputLastName">Apellido</label>
             <input
               type="text"
               class="form-control"
               id="inputLastName"
+              placeholder="Ex. Castro A."
               required
             />
           </div>
         </div>
 
         <div class="row">
-          <div class="form-group col-6" id="cityDiv">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity" required />
+          <div class="form-group col-6 text-dark" id="cityDiv">
+            <label for="inputCity">Ciudad</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputCity"
+              placeholder="Ex. San Jose"
+              required
+            />
           </div>
-          <div class="form-group col-3" id="stateDiv">
-            <label for="inputState">State</label>
+          <div class="form-group col-3 text-dark" id="stateDiv">
+            <label for="inputState">Canton</label>
             <select id="inputState" class="form-control custom-select" required>
-              <option selected disabled value="">Pick state</option>
-              <option>State 1</option>
-              <option>State 2</option>
-              <option>State 3</option>
+              <option selected disabled value="">Elegir Uno</option>
+              <option>Escazu</option>
+              <option>Santa Ana</option>
+              <option>Lindora</option>
             </select>
           </div>
-          <div class="form-group col-3" id="postalCodeDiv">
-            <label for="inputPostalCode">Postal Code</label>
+          <div class="form-group col-3 text-dark" id="postalCodeDiv">
+            <label for="inputPostalCode">Codigo Postal</label>
             <input
               type="text"
               class="form-control"
               id="inputPostalCode"
+              placeholder="XXXX"
               required
             />
           </div>
@@ -109,7 +118,7 @@
 
         <div class="row">
           <div class="form-group col-6">
-            <label class="d-block">We accept:</label>
+            <label class="d-block text-dark">Aceptamos:</label>
             <div class="bg-secondary rounded d-inline-block p-2">
               <div class="form-check form-check-inline">
                 <input
@@ -162,8 +171,8 @@
               </div>
             </div>
           </div>
-          <div class="form-group col-6">
-            <label for="inputMessage">Message</label>
+          <div class="form-group col-6 text-dark">
+            <label for="inputMessage">Mensaje</label>
             <textarea class="form-control" id="inputMessage"></textarea>
             <small id="messageHelpBlock" class="form-text text-muted">
               Add any notes here.
@@ -174,10 +183,10 @@
 
       <div class="card-footer d-flex justify-content-end">
         <button type="reset" class="btn btn-dark mr-3" id="resetButton">
-          Cancel
+          Cancelar
         </button>
         <button type="submit" class="btn btn-primary" id="submitButton">
-          Send
+          Enviar
         </button>
       </div>
     </div>
